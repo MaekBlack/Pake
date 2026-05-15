@@ -11,10 +11,9 @@ jobs:
 
       - uses: tw93/Pake@main
         with:
-          url: "https://acid.fit2cloud.cn:88"
+          url: "http://10.1.12.2:9080"
           name: "DataEase"
           icon: "https://dataease-1323865188.cos.ap-nanjing.myqcloud.com/tmp/DataEase.ico"
-          args: "--ignore-certificate-errors"
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
