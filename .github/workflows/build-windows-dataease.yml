@@ -14,9 +14,12 @@ jobs:
           url: "https://acid.fit2cloud.cn:88"
           name: "DataEase"
           icon: "https://dataease-1323865188.cos.ap-nanjing.myqcloud.com/tmp/DataEase.ico"
-          ignore-certificate-errors: "true"
+          args: "--ignore-certificate-errors"
 
-      - uses: actions/upload-artifact@v4
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
         with:
           name: DataEase-windows
-          path: output/
+          path: |
+            *.msi
+            *.exe
