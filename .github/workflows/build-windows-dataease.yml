@@ -9,7 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: tw93/Pake@v3
+      - uses: tw93/Pake@main
         with:
           url: "https://acid.fit2cloud.cn:88"
           name: "DataEase"
