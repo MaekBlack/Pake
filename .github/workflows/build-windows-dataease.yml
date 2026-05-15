@@ -1,0 +1,22 @@
+name: Build DataEase Windows
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: tw93/Pake@v3
+        with:
+          url: "https://acid.fit2cloud.cn:88"
+          name: "DataEase"
+          icon: "https://dataease-1323865188.cos.ap-nanjing.myqcloud.com/tmp/DataEase.ico"
+          ignore-certificate-errors: "true"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: DataEase-windows
+          path: output/
